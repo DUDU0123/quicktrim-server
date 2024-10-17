@@ -15,7 +15,7 @@ async function handleGenerateNewShortURL(req, res) {
             visitHistory: [],
         });
         return res.json(
-            { shortenUrl: `http://192.168.43.69:${process.env.PORT}/url/${shortID}`,originalUrl :body.url, id: urlmodel._id, visitedCount: urlmodel.visitHistory.length })
+            { shortenUrl: `https://quicktrim-server-production.up.railway.app/url/${shortID}`,originalUrl :body.url, id: urlmodel._id, visitedCount: urlmodel.visitHistory.length })
     } catch (error) {
         console.log('Error occured inside controller', error)
     }
